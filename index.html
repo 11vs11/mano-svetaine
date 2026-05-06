@@ -1,173 +1,204 @@
 <!DOCTYPE html>
 <html lang="lt">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kelionių pasaulis</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kelionių pasaulis</title>
 
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            scroll-behavior: smooth;
-        }
+<style>
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    scroll-behavior: smooth;
+}
 
-        /* HEADER */
-        header {
-            height: 100vh;
-            background: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e') center/cover no-repeat;
-            color: white;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-        }
+/* HEADER */
+header {
+    height: 100vh;
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+    url('https://images.unsplash.com/photo-1501785888041-af3ef285b470');
+    background-size: cover;
+    color: white;
+}
 
-        nav {
-            display: flex;
-            justify-content: center;
-            gap: 40px;
-            padding: 20px;
-            background: rgba(0,0,0,0.5);
-        }
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding: 20px;
+}
 
-        nav a {
-            color: white;
-            text-decoration: none;
-            font-size: 18px;
-            transition: 0.3s;
-        }
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
 
-        nav a:hover {
-            color: #00d4ff;
-        }
+nav a:hover {
+    color: #00ffd5;
+}
 
-        .header-content {
-            text-align: center;
-            margin-bottom: 100px;
-        }
+.hero {
+    text-align: center;
+    margin-top: 200px;
+}
 
-        .header-content h1 {
-            font-size: 60px;
-        }
+.hero h1 {
+    font-size: 60px;
+}
 
-        /* SECTIONS */
-        section {
-            padding: 60px 20px;
-        }
+.btn {
+    padding: 12px 25px;
+    background: #00ffd5;
+    color: black;
+    border: none;
+    margin-top: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
 
-        h2 {
-            text-align: center;
-            margin-bottom: 30px;
-        }
+.btn:hover {
+    background: white;
+}
 
-        /* ABOUT */
-        #apie {
-            background: #f4f4f4;
-        }
+/* SECTIONS */
+section {
+    padding: 60px 20px;
+}
 
-        .about-text {
-            max-width: 800px;
-            margin: auto;
-            line-height: 1.6;
-        }
+h2 {
+    text-align: center;
+}
 
-        /* GALLERY */
-        .gallery {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 15px;
-        }
+/* ABOUT */
+#apie {
+    background: #f5f5f5;
+    text-align: center;
+    max-width: 800px;
+    margin: auto;
+}
 
-        .gallery img {
-            width: 100%;
-            height: 200px;
-            object-fit: cover;
-            transition: 0.3s;
-        }
+/* CARDS */
+.cards {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
 
-        .gallery img:hover {
-            transform: scale(1.05);
-        }
+.card {
+    width: 250px;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    transition: 0.3s;
+}
 
-        /* CONTACT */
-        #kontaktai {
-            background: #222;
-            color: white;
-            text-align: center;
-        }
+.card:hover {
+    transform: translateY(-10px);
+}
 
-        a {
-            color: #00d4ff;
-        }
+/* GALLERY */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 15px;
+}
 
-        /* FOOTER */
-        footer {
-            background: black;
-            color: white;
-            text-align: center;
-            padding: 20px;
-        }
-    </style>
+.gallery img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    transition: 0.3s;
+    border-radius: 10px;
+}
+
+.gallery img:hover {
+    transform: scale(1.1);
+}
+
+/* CONTACT */
+#kontaktai {
+    background: #111;
+    color: white;
+    text-align: center;
+}
+
+/* FOOTER */
+footer {
+    background: black;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+</style>
 </head>
 
 <body>
 
 <header>
-    <nav>
-        <a href="#apie">Apie</a>
-        <a href="#galerija">Galerija</a>
-        <a href="#kontaktai">Kontaktai</a>
-    </nav>
+<nav>
+<a href="#apie">Apie</a>
+<a href="#vietos">Vietos</a>
+<a href="#galerija">Galerija</a>
+<a href="#kontaktai">Kontaktai</a>
+</nav>
 
-    <div class="header-content">
-        <h1>Kelionių pasaulis</h1>
-        <p>Pažink pasaulį kartu su manimi</p>
-    </div>
+<div class="hero">
+<h1>Kelionių pasaulis</h1>
+<p>Atrask gražiausias vietas</p>
+<a href="#galerija"><button class="btn">Peržiūrėti</button></a>
+</div>
 </header>
 
 <section id="apie">
-    <h2>Apie</h2>
-    <div class="about-text">
-        <p>Kelionės yra vienas nuostabiausių būdų pažinti pasaulį ir save. Aš labai mėgstu lankytis skirtingose šalyse ir atrasti naujas kultūras. Kiekviena kelionė suteikia naujų įspūdžių, patirčių ir prisiminimų. Man patinka fotografuoti gražiausias vietas ir dalintis jomis su kitais. Ši svetainė skirta parodyti nuostabiausias pasaulio vietas ir įkvėpti kitus keliauti.</p>
-    </div>
+<h2>Apie</h2>
+<p>
+Kelionės leidžia pamatyti pasaulį visai kitomis akimis ir patirti nepamirštamus nuotykius. 
+Aš labai mėgstu tyrinėti naujas šalis, miestus ir gamtos kampelius. 
+Kiekviena vieta turi savo istoriją, kultūrą ir ypatingą atmosferą. 
+Kelionės ne tik praturtina mūsų žinias, bet ir suteikia daug džiaugsmo. 
+Šioje svetainėje dalinuosi gražiausiomis vietomis ir įkvėpimu keliauti.
+</p>
+</section>
+
+<section id="vietos">
+<h2>Populiarios vietos</h2>
+<div class="cards">
+<div class="card">🌴 Maldyvai</div>
+<div class="card">🏔️ Šveicarija</div>
+<div class="card">🏙️ Niujorkas</div>
+</div>
 </section>
 
 <section id="galerija">
-    <h2>Galerija</h2>
-    <div class="gallery">
-        <img src="https://source.unsplash.com/400x300/?travel,1">
-        <img src="https://source.unsplash.com/400x300/?travel,2">
-        <img src="https://source.unsplash.com/400x300/?travel,3">
-        <img src="https://source.unsplash.com/400x300/?travel,4">
-        <img src="https://source.unsplash.com/400x300/?travel,5">
-        <img src="https://source.unsplash.com/400x300/?travel,6">
-        <img src="https://source.unsplash.com/400x300/?travel,7">
-        <img src="https://source.unsplash.com/400x300/?travel,8">
-        <img src="https://source.unsplash.com/400x300/?travel,9">
-        <img src="https://source.unsplash.com/400x300/?travel,10">
-    </div>
+<h2>Galerija</h2>
+<div class="gallery">
+<img src="https://source.unsplash.com/400x300/?beach">
+<img src="https://source.unsplash.com/400x300/?mountains">
+<img src="https://source.unsplash.com/400x300/?city">
+<img src="https://source.unsplash.com/400x300/?travel">
+<img src="https://source.unsplash.com/400x300/?island">
+<img src="https://source.unsplash.com/400x300/?nature">
+<img src="https://source.unsplash.com/400x300/?ocean">
+<img src="https://source.unsplash.com/400x300/?forest">
+<img src="https://source.unsplash.com/400x300/?sunset">
+<img src="https://source.unsplash.com/400x300/?waterfall">
+</div>
 </section>
 
 <section id="kontaktai">
-    <h2>Kontaktai</h2>
-    <p>El. paštas: info@keliones.lt</p>
-    <p>Adresas: Vilniaus g. 10, Šiauliai</p>
-    <p>
-        Google Maps: 
-        <a href="https://www.google.com/maps?q=Šiauliai" target="_blank">
-            Atidaryti žemėlapyje
-        </a>
-    </p>
-    <p>
-        Instagram: 
-        <a href="https://instagram.com" target="_blank">
-            Mano profilis
-        </a>
-    </p>
+<h2>Kontaktai</h2>
+<p>El. paštas: info@keliones.lt</p>
+<p>Adresas: Vilniaus g. 10, Šiauliai</p>
+<p><a href="https://maps.google.com" target="_blank">Google Maps</a></p>
+<p><a href="https://instagram.com" target="_blank">Instagram</a></p>
 </section>
 
 <footer>
-    <p>© 2026 Kelionių pasaulis. Visos teisės saugomos.</p>
+<p>© 2026 Kelionių pasaulis</p>
 </footer>
 
 </body>
